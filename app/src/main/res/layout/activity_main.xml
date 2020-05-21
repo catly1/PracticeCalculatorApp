@@ -15,6 +15,7 @@
         android:background="#efefef"
         android:textSize="48sp"
         android:maxLength="12"
+        android:gravity="right|center_vertical|bottom"
         />
     <!--Row 1-->
     <LinearLayout
@@ -54,7 +55,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="/"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         />
 </LinearLayout>
     <!--Row 2-->
@@ -94,8 +95,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="X"
-            android:onClick="onDigit"
+            android:text="*"
+            android:onClick="onOperator"
             />
     </LinearLayout>
     <!--Row 3-->
@@ -136,7 +137,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="-"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             />
     </LinearLayout>
     <!--Row 4-->
@@ -153,7 +154,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="."
-            android:onClick="onDigit"
+            android:onClick="onDecimalPoint"
             />
         <Button
             android:id="@+id/zeroButton"
@@ -169,7 +170,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="clr"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             />
         <Button
             android:id="@+id/addButton"
@@ -177,7 +178,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="+"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             />
     </LinearLayout>
     <!--Row 5-->
@@ -192,6 +193,7 @@
             android:id="@+id/equalButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="="/>
+            android:text="="
+            android:onClick="onEqual"/>
     </LinearLayout>
 </LinearLayout>
